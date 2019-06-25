@@ -339,6 +339,11 @@ class Line(object):
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
 
+        new_start = self.start
+        new_end = self.end
+        line2 = Line(new_start,new_end)
+        return line2
+
     def reverse(self):
         """
         What comes in:
