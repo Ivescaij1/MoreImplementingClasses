@@ -341,8 +341,8 @@ class Line(object):
 
         new_start = self.start
         new_end = self.end
-        line2 = Line(new_start,new_end)
-        return line2
+        new_line = Line(new_start,new_end)
+        return new_line
 
     def reverse(self):
         """
@@ -368,7 +368,7 @@ class Line(object):
             print(line1 == line2)    # Should now print: True
         """
         # --------------------------------------------------------------
-        # TODO: 5.
+        # DONE: 5.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -376,6 +376,11 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
+
+        new_start = self.end
+        new_end = self.start
+        self.start = new_start
+        self.end = new_end
 
     def slope(self):
         """
