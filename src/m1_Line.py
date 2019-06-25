@@ -225,6 +225,8 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
+        self.start = start
+        self.end = end
 
     def __repr__(self):
         """
