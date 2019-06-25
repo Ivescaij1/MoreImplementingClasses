@@ -338,7 +338,6 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
-
         new_start = self.start
         new_end = self.end
         new_line = Line(new_start,new_end)
@@ -376,7 +375,6 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
-
         new_start = self.end
         new_end = self.start
         self.start = new_start
