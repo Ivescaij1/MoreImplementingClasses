@@ -344,7 +344,7 @@ class Line(object):
         # --------------------------------------------------------------
         new_start = self.start
         new_end = self.end
-        new_line = Line(new_start,new_end)
+        new_line = Line(new_start, new_end)
 
         self.number_of_clones = self.number_of_clones + 1
 
