@@ -16,7 +16,7 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_simple_t()
+    run_test_simple_t()
     # run_test_set_colors()
     # run_test_move_by()
     # run_test_clone()
@@ -118,7 +118,7 @@ class CapitalT(object):
 
            *** See the dimensions PDF for the exact placement of the rectangles in the T. ***
 
-        Each rectangle is an rg.Rectangle. Unlike prior modules you are NOT
+        Each rectangle is an rg.Rectangle. Unlike prior modules, you are NOT
             allowed to make any other instance variables. You may only use
             exactly these two and must figure out how to do the problem with ONLY
             those two instance variables.
@@ -137,11 +137,17 @@ class CapitalT(object):
           :type letter_thickness:   int
         """
         # --------------------------------------------------------------
-        # TODO: 3.
+        # DONE: 3.
         #   READ the above specification, including the Example.
         #   Implement this method
         #   Note: you will need to also implement attach_to before testing
         # --------------------------------------------------------------
+        h_upperleft = rg.Point((intersection_center.x - width / 2), (intersection_center.y - letter_thickness / 2))
+        h_lowerright = rg.Point((intersection_center.x + width / 2), (intersection_center.y + letter_thickness / 2))
+        v_upperleft = rg.Point((intersection_center.x - letter_thickness / 2), (intersection_center.y - letter_thickness / 2))
+        v_lowerrighy = rg.Point((intersection_center.x + letter_thickness / 2), (intersection_center.y + height - letter_thickness / 2))
+        self.h_rect = rg.Rectangle(h_upperleft, h_lowerright)
+        self.v_rect = rg.Rectangle(v_upperleft, v_lowerrighy)
 
     def attach_to(self, window):
         """
@@ -162,11 +168,13 @@ class CapitalT(object):
           :type window: rg.RoseWindow
         """
         # --------------------------------------------------------------
-        # TODO: 4.
+        # DONE: 4.
         #   READ the above specification, including the Example.
         #   Implement and test this method by looking at the console and
         #     the graphics window (compare it to simple_t.pdf)
         # --------------------------------------------------------------
+        self.v_rect.attach_to(window)
+        self.h_rect.attach_to(window)
 
     def set_colors(self, fill_color, outline_color):
         """
