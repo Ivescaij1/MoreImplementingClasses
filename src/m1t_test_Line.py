@@ -896,8 +896,6 @@ def run_test_is_parallel():
 #
 #     end_test()
 
-
-
 def run_test_reset():
     """ Tests the   reset   method of the Line class. """
     if not start_test('reset'):
